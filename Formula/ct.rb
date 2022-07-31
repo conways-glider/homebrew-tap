@@ -5,6 +5,12 @@ class Ct < Formula
   sha256 "672733fa257b7910625ec118ad1e8b57c79e841cdafc17527346d9ec89d368c3"
   license any_of: ["MIT", "Apache-2.0"]
 
+  bottle do
+    root_url "https://github.com/conways-glider/homebrew-tap/releases/download/ct-1.0.0"
+    sha256 cellar: :any_skip_relocation, big_sur:      "fda5fa3f1babe8e8b52ba5f513e3143208d3baac4813785495702ee968b31d93"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "742a8537a822b75071661adf421b751742c07e0a0c36d37241dc901d98ec853a"
+  end
+
   depends_on "go" => :build
 
   def install
