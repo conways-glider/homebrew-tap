@@ -5,20 +5,20 @@
 class Ct < Formula
   desc "Config file format transformer"
   homepage "https://github.com/conways-glider/ct"
-  version "1.0.5"
+  version "1.0.6"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/conways-glider/ct/releases/download/1.0.5/ct_darwin_x86_64.tar.gz"
-      sha256 "c67e482d6900aec575570f319c9d6057cac39b2424beec61ec10a5fbbfbdd29f"
+    on_intel do
+      url "https://github.com/conways-glider/ct/releases/download/1.0.6/ct_darwin_x86_64.tar.gz"
+      sha256 "83262921aa68e0a09f147d219a4403f14c00c6196226f9045cd985d6bcf878be"
 
       def install
         bin.install "ct"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/conways-glider/ct/releases/download/1.0.5/ct_darwin_arm64.tar.gz"
-      sha256 "2c7665979c88d4871da4f7d5d40371d231c8f38d6dc262b5ab0400703f53c9fa"
+    on_arm do
+      url "https://github.com/conways-glider/ct/releases/download/1.0.6/ct_darwin_arm64.tar.gz"
+      sha256 "717432733ed514983cac2bd1b065e585688527ed2919f2aa70d942e42698d5a0"
 
       def install
         bin.install "ct"
@@ -27,20 +27,24 @@ class Ct < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/conways-glider/ct/releases/download/1.0.5/ct_linux_arm64.tar.gz"
-      sha256 "665fa55c13a90975daf89169370c9e553b2c6e3b877bb2b1d472a265f3d26fcd"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/conways-glider/ct/releases/download/1.0.6/ct_linux_x86_64.tar.gz"
+        sha256 "a21cdcec6b34332c5d672b16d89e0b59086fe41d37f22edec952ac933d48ebda"
 
-      def install
-        bin.install "ct"
+        def install
+          bin.install "ct"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/conways-glider/ct/releases/download/1.0.5/ct_linux_x86_64.tar.gz"
-      sha256 "74339bf94e4728735fc35472969723f3f421376ec978c0f3bab7229ff65c9554"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/conways-glider/ct/releases/download/1.0.6/ct_linux_arm64.tar.gz"
+        sha256 "7d66bf62e60a7cc01211c3c67e0483139935b480e52dfac6bc03b863400a40b2"
 
-      def install
-        bin.install "ct"
+        def install
+          bin.install "ct"
+        end
       end
     end
   end
