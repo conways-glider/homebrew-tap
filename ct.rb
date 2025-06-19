@@ -5,20 +5,20 @@
 class Ct < Formula
   desc "Config file format transformer"
   homepage "https://github.com/conways-glider/ct"
-  version "1.0.8"
+  version "1.0.9"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/conways-glider/ct/releases/download/1.0.8/ct_darwin_x86_64.tar.gz"
-      sha256 "b88c5b9e5a3cfa33283929d34952f55e8ebb7b92643484c291f52ece17430f49"
+      url "https://github.com/conways-glider/ct/releases/download/1.0.9/ct_darwin_x86_64.tar.gz"
+      sha256 "4cce5eba606f606916061dc26e176a6029747fb512e0419b7ec8f69becb1e307"
 
       def install
         bin.install "ct"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/conways-glider/ct/releases/download/1.0.8/ct_darwin_arm64.tar.gz"
-      sha256 "83ef16823eba3fb983187d5f414e8344cea4c4464eb156678400c532848b5070"
+      url "https://github.com/conways-glider/ct/releases/download/1.0.9/ct_darwin_arm64.tar.gz"
+      sha256 "6b6e902e8498b9977b9448f8d6df933c5c948491c6545d36c8e25d722766f1a6"
 
       def install
         bin.install "ct"
@@ -28,15 +28,15 @@ class Ct < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/conways-glider/ct/releases/download/1.0.8/ct_linux_x86_64.tar.gz"
-      sha256 "044c05eb66fcce65a1a125e95b33d885d205f0a1553a85b57006d6df3c81a6ff"
+      url "https://github.com/conways-glider/ct/releases/download/1.0.9/ct_linux_x86_64.tar.gz"
+      sha256 "2fb684222bd320ab8b1a08e7074e10fadef697ac4a6e7cbb59ecd8cde6a8a9a8"
       def install
         bin.install "ct"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/conways-glider/ct/releases/download/1.0.8/ct_linux_arm64.tar.gz"
-      sha256 "5837e3f091176be715dbc1d7e8587e8aaf7a13411086cbcaf40da16aa1c82bf8"
+      url "https://github.com/conways-glider/ct/releases/download/1.0.9/ct_linux_arm64.tar.gz"
+      sha256 "e43cc61a74fa6505b739fae6298a5911d591fbda5abda2e81bc3cad5750a543a"
       def install
         bin.install "ct"
       end
