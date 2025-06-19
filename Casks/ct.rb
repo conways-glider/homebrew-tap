@@ -2,7 +2,7 @@
 cask "ct" do
   desc "Config file format transformer"
   homepage "https://github.com/conways-glider/ct"
-  version "1.0.10"
+  version "1.0.11"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,23 @@ cask "ct" do
 
   on_macos do
     on_intel do
-      url "https://github.com/conways-glider/ct/releases/download/1.0.10/ct_darwin_x86_64.tar.gz"
-      sha256 "d176181401be5253cbce3b1eae52a9e485fd308219d621d93fafcfa34b308007"
+      url "https://github.com/conways-glider/ct/releases/download/1.0.11/ct_darwin_x86_64.tar.gz"
+      sha256 "9275f075b8b6730eb4ce1cd81c1db060b3a741f6736591314004739ff19e4d9c"
     end
     on_arm do
-      url "https://github.com/conways-glider/ct/releases/download/1.0.10/ct_darwin_arm64.tar.gz"
-      sha256 "5f6ba4134dc0e95bc707938256b1bf9e485cb353a04cb2dea760ba41db63d658"
+      url "https://github.com/conways-glider/ct/releases/download/1.0.11/ct_darwin_arm64.tar.gz"
+      sha256 "c6b525e12e01c87302e40a1ded7c9b51b8cf8208adebe36c021da9f8482d6540"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/conways-glider/ct/releases/download/1.0.10/ct_linux_x86_64.tar.gz"
-      sha256 "b0207fb0c7dd86201a39b4f1ee5689120e0301848f8c291ddf1fd1472c171062"
+      url "https://github.com/conways-glider/ct/releases/download/1.0.11/ct_linux_x86_64.tar.gz"
+      sha256 "2d0567994a33ca5f8ba9442511f400ab598c9213546021a084c94c71ab4bc1e2"
     end
     on_arm do
-      url "https://github.com/conways-glider/ct/releases/download/1.0.10/ct_linux_arm64.tar.gz"
-      sha256 "1c2a89d3a32b33d9ec703026b775518045500143e19f7553d1fbf2c3af0931ed"
+      url "https://github.com/conways-glider/ct/releases/download/1.0.11/ct_linux_arm64.tar.gz"
+      sha256 "a91654e95ed61977ff475562dfe890ade07aaa977cb3fd8f5d31354903c3fb62"
     end
   end
 
